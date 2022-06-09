@@ -4,7 +4,7 @@ Ligand-based prediction of hERG blockade.
 
 | Description | Input  | Output  | Training Data | Experimental Validation |
 | ------- | --- | --- | --- | --- |
-| A robust predictor for hERG channel blockade based on deep learning meta-feature ensembles | SMILES | hERG activity | 12620 molecules | Yes |
+| A robust predictor for hERG channel blockade based on deep learning meta-feature ensembles | SMILES | hERG activity | 12620 molecules | No |
 
 ## Source Code
 This model has been published by Abdul Karim, Matthew Lee, Thomas Balle & Abdul Sattar 
