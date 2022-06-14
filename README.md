@@ -4,10 +4,10 @@ Ligand-based prediction of hERG blockade.
 
 | Description | Input  | Output  | Training Data | Experimental Validation |
 | ------- | --- | --- | --- | --- |
-| A robust predictor for hERG channel blockade based on deep learning meta-feature ensembles | SMILES | hERG activity | 12,620 molecules | No |
+| A robust predictor for hERG channel blockade based on deep learning meta-feature ensembles | SMILES | IC _50_ | 12,620 molecules | No |
 
 ## Source Code
-This model has been published by Karim, A., Lee, M., Balle, T. et al. CardioTox net: a robust predictor for hERG channel blockade based on deep learning meta-feature ensembles. J Cheminform 13, 60 (2021). DOI: https://doi.org/10.1186/s13321-021-00541-z
+This model has been published by Karim, A., Lee, M., Balle, T. et al. CardioTox net: a robust predictor for hERG channel blockade based on deep learning meta-feature ensembles. *J Cheminform 13*, 60 (2021). DOI: https://doi.org/10.1186/s13321-021-00541-z
 
 Code: https://github.com/Abdulk084/CardioTox
 
