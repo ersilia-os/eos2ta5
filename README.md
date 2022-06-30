@@ -1,30 +1,24 @@
-# CardioToxNet-hERG
+# Cardiotoxicity: hERG channel blockade
 
-Ligand-based prediction of hERG blockade.
+## Model Identifiers
+- Slug: cardioToxNet-hERG
+- Ersilia ID: eos2ta5
+- Tags: herg, toxicity, ADMET
 
-| Description | Input  | Output  | Training Data | Experimental Validation |
-| ------- | --- | --- | --- | --- |
-| A robust predictor for hERG channel blockade based on deep learning meta-feature ensembles | SMILES | IC _50_ | 12,620 molecules | No |
+## Model Description
+ A robust predictor for hERG channel blockade based on deep learning meta-feature ensembles 
+ - Input: SMILES 
+ - Output: IC _50_ 
+ - Training data: 12,620 molecules https://github.com/Abdulk084/CardioTox/blob/master/data/train_validation_cardio_tox_data.tar.xz
+ - Experimentally validated: No 
 
 ## Source Code
 This model has been published by Karim, A., Lee, M., Balle, T. et al. CardioTox net: a robust predictor for hERG channel blockade based on deep learning meta-feature ensembles. *J Cheminform 13*, 60 (2021). DOI: https://doi.org/10.1186/s13321-021-00541-z
+- Code: https://github.com/Abdulk084/CardioTox
+- Checkpoints: https://github.com/Abdulk084/CardioTox/tree/master/cardiotox/models
 
-Code: https://github.com/Abdulk084/CardioTox
-
-## Extended description
-
-Blockade of hERG channels may cause prolonged QT intervals that potentially could lead to cardiotoxicity. The authors trained a step-wise deep learning based framework for classifying drug-like molecules as hERG blockers and hERG non blockers. 
-
-### Summary 
-- Predicts **hERG blocking activity** in molecules
-- Takes **molecular structures** as input
-- Trained with **drug-like small molecules.**
-- Based on a data set of **>12000 molecules.**
-- Published in Journal of Cheminformatics by Karim, A., Lee, M., Balle, T. et al, (2021) https://doi.org/10.1186/s13321-021-00541-z
-
-### Specifications 
-- Input: SMILES string
-- Output: hERG activity
+## Licenses
+The GPL-v3 license applies to all parts of this repository.
 
 ## History 
 - Model was incorporated on October 18, 2021
