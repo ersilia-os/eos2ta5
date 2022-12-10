@@ -4,7 +4,7 @@ import numpy as np
 import tensorflow as tf
 import keras
 
-from keras.layers.embeddings import Embedding
+from keras.layers import Embedding
 from keras.layers import Flatten
 from tensorflow.python.keras.models import Model
 from tensorflow.python.keras.regularizers import l2
