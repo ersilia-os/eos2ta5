@@ -1,24 +1,40 @@
-# Cardiotoxicity: hERG channel blockade
+# Ligand-based prediction of hERG blockade
 
-## Model Identifiers
-- Slug: cardioToxNet-hERG
-- Ersilia ID: eos2ta5
-- Tags: herg, toxicity, ADMET
+A robust predictor for hERG channel blockade based on an ensemble of five deep learning models. The authors have collected a dataset from public sources, such as BindingDB and ChEMBL on hERG blockers and non-blockers. The cut-off for hERG blockade was set at IC50 < 10 uM for the classifier.
 
-## Model Description
- A robust predictor for hERG channel blockade based on deep learning meta-feature ensembles 
- - Input: SMILES 
- - Output: IC _50_ 
- - Training data: 12,620 molecules https://github.com/Abdulk084/CardioTox/blob/master/data/train_validation_cardio_tox_data.tar.xz
- - Experimentally validated: No 
+## Identifiers
 
-## Source Code
-This model has been published by Karim, A., Lee, M., Balle, T. et al. CardioTox net: a robust predictor for hERG channel blockade based on deep learning meta-feature ensembles. *J Cheminform 13*, 60 (2021). DOI: https://doi.org/10.1186/s13321-021-00541-z
-- Code: https://github.com/Abdulk084/CardioTox
-- Checkpoints: https://github.com/Abdulk084/CardioTox/tree/master/cardiotox/models
+* EOS model ID: `eos2ta5`
+* Slug: `cardiotoxnet-herg`
 
-## Licenses
-The GPL-v3 license applies to all parts of this repository.
+## Characteristics
 
-## History 
-- Model was incorporated on October 18, 2021
+* Input: `Compound`
+* Input Shape: `Single`
+* Task: `Classification`
+* Output: `Probability`
+* Output Type: `Float`
+* Output Shape: `Single`
+* Interpretation: Probability that the compound inhibits hERG (IC50 < 10 uM)
+
+## References
+
+* [Publication](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-021-00541-z)
+* [Source Code](https://github.com/Abdulk084/CardioTox)
+* Ersilia contributor: [miquelduranfrigola](https://github.com/miquelduranfrigola)
+
+## Citation
+
+If you use this model, please cite the [original authors](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-021-00541-z) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
+
+## License
+
+This package is licensed under a GPL-3.0 license. The model contained within this package is licensed under a None license.
+
+Notice: Ersilia grants access to these models 'as is' provided by the original authors, please refer to the original code repository and/or publication if you use the model in your research.
+
+## About Us
+
+The [Ersilia Open Source Initiative](https://ersilia.io) is a Non Profit Organization ([1192266](https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/5170657/full-print)) with the mission is to equip labs, universities and clinics in LMIC with AI/ML tools for infectious disease research.
+
+[Help us](https://www.ersilia.io/donate) achieve our mission!
