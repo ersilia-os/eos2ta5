@@ -23,6 +23,9 @@ A robust predictor for hERG channel blockade based on an ensemble of five deep l
 * [Source Code](https://github.com/Abdulk084/CardioTox)
 * Ersilia contributor: [miquelduranfrigola](https://github.com/miquelduranfrigola)
 
+## Ersilia model URLs
+* [GitHub](https://github.com/ersilia-os/eos2ta5)
+
 ## Citation
 
 If you use this model, please cite the [original authors](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-021-00541-z) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
