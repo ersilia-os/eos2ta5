@@ -10,11 +10,18 @@ from rdkit import Chem, DataStructs
 
 from PyBioMed.PyMolecule.fingerprint import CalculateECFP2Fingerprint
 from PyBioMed.PyMolecule.fingerprint import CalculatePubChemFingerprint
+import os
+
+# current file directory
+root = os.path.dirname(os.path.abspath(__file__))
+
+# checkpoints directory
+checkpoints_dir = os.path.abspath(os.path.join(root,"..", "..", "..", "checkpoints"))
 
 
 class FingerprintModel(CardioTox):
 
-    def __init__(self, checkpoint_path="cardiotox/models/training_fp/cp_fp.ckpt"):
+    def __init__(self, checkpoint_path=checkpoints_dir + "/training_fp/cp_fp.ckpt"):
         CardioTox.__init__(self, checkpoint_path)
     
     def _calculate_fingerprint(self, smiles):

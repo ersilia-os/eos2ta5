@@ -12,11 +12,18 @@ from tensorflow.python.keras.layers import Dense, Dropout
 from sklearn.metrics import roc_auc_score
 from itertools import chain, repeat, islice
 import re
+import os
+
+# current file directory
+root = os.path.dirname(os.path.abspath(__file__))
+
+# checkpoints directory
+checkpoints_dir = os.path.abspath(os.path.join(root, "..", "..", "..", "checkpoints"))
 
 
 class SVModel(CardioTox):
 
-    def __init__(self, checkpoint_path="cardiotox/models/training_sv/cp_sv.ckpt"):
+    def __init__(self, checkpoint_path=checkpoints_dir + "/training_sv/cp_sv.ckpt"):
         CardioTox.__init__(self, checkpoint_path)
         self.items_list=[ '$', '^', '#', '(', ')', '-', '.', '/', '1', '2', '3', '4', '5', '6', '7', '=', 'Br', 
                'C', 'Cl', 'F', 'I', 'N', 'O', 'P', 'S', '[2H]', '[Br-]', '[C@@H]', '[C@@]', '[C@H]', '[C@]', 

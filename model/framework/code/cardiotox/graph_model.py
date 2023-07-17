@@ -11,11 +11,18 @@ from sklearn.metrics import roc_auc_score
 from tensorflow.python.keras.layers import Dense, Dropout
 from rdkit import Chem, DataStructs
 from spektral.layers import GraphConv
+import os
+
+# current file directory
+root = os.path.dirname(os.path.abspath(__file__))
+
+# checkpoints directory
+checkpoints_dir = os.path.abspath(os.path.join(root, "..", "..", "..", "checkpoints"))
 
 
 class GraphModel(CardioTox):
 
-    def __init__(self, checkpoint_path="cardiotox/models/training_gc/cp_gc.ckpt"):
+    def __init__(self, checkpoint_path=checkpoints_dir + "/training_gc/cp_gc.ckpt"):
         CardioTox.__init__(self, checkpoint_path)
     
     def _convert_smile_to_graph(self, smiles):
