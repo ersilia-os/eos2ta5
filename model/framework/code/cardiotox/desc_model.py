@@ -10,11 +10,18 @@ from sklearn.metrics import roc_auc_score
 from tensorflow.python.keras.layers import Dense, Dropout
 from rdkit import Chem, DataStructs
 from mordred import Calculator, descriptors
+import os
 
+# current file directory
+root = os.path.dirname(os.path.abspath(__file__))
+print('root',root)
+# checkpoints directory
+checkpoints_dir = os.path.abspath(os.path.join(root,"..", "..", "..", "checkpoints"))
+print('checkpoints_dir 1',checkpoints_dir)
 
 class DescModel(CardioTox):
 
-    def __init__(self, checkpoint_path="cardiotox/models/training_desc/cp_desc.ckpt", desc_file="cardiotox/models/training_desc/des_file.txt"):
+    def __init__(self, checkpoint_path=checkpoints_dir + "/training_desc/cp_desc.ckpt", desc_file=checkpoints_dir + "/training_desc/des_file.txt"):
         CardioTox.__init__(self, checkpoint_path)
         self.desc_file = desc_file
         self.descriptor_names = []
@@ -31,7 +38,7 @@ class DescModel(CardioTox):
 
     def _load_scaler(self):
         try:
-            pickle_in = open("cardiotox/models/training_desc/normalizer.pickle", "rb")
+            pickle_in = open(checkpoints_dir + "/training_desc/normalizer.pickle", "rb")
             self.normalizer = pickle.load(pickle_in)
         except:
             self.normalizer = self._generate_scalar()

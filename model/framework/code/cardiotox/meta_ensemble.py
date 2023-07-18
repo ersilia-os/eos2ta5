@@ -12,11 +12,18 @@ from .fv_model import FVModel
 from .sv_model import SVModel
 from .fingerprint_model import FingerprintModel
 from os.path import join
+import os
+
+# current file directory
+root = os.path.dirname(os.path.abspath(__file__))
+
+# checkpoints directory
+checkpoints_dir = os.path.abspath(os.path.join(root, "..", "..", "..", "checkpoints"))
 
 
 class EnsembleModel(CardioTox):
 
-    def __init__(self, members, checkpoint_path="cardiotox/models/training_stack/cp_st.ckpt"):
+    def __init__(self, members, checkpoint_path=checkpoints_dir + "/training_stack/cp_st.ckpt"):
         CardioTox.__init__(self, checkpoint_path, members)
         self.model_order = ["fp", "dm", "sv", "fv"]
     

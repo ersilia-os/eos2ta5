@@ -25,6 +25,8 @@ A robust predictor for hERG channel blockade based on an ensemble of five deep l
 
 ## Ersilia model URLs
 * [GitHub](https://github.com/ersilia-os/eos2ta5)
+* [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2ta5.zip)
+* [DockerHub](https://hub.docker.com/r/ersiliaos/eos2ta5) (AMD64)
 
 ## Citation
 

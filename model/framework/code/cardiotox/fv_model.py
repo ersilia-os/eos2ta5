@@ -13,11 +13,18 @@ from sklearn.metrics import roc_auc_score
 
 from rdkit import Chem, DataStructs
 from rdkit.Chem import AllChem
+import os
+
+# current file directory
+root = os.path.dirname(os.path.abspath(__file__))
+
+# checkpoints directory
+checkpoints_dir = os.path.abspath(os.path.join(root, "..", "..", "..", "checkpoints"))
 
 
 class FVModel(CardioTox):
 
-    def __init__(self, checkpoint_path="cardiotox/models/training_fv/cp_fv.ckpt"):
+    def __init__(self, checkpoint_path=checkpoints_dir + "/training_fv/cp_fv.ckpt"):
         CardioTox.__init__(self, checkpoint_path)
     
     def _convert_to_fv(self, smiles):
