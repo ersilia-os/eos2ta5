@@ -41,9 +41,13 @@
     "Incorporation Date": "2021-10-18",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2ta5.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos2ta5",
-    "Docker Architecture": [
-        "AMD64"
-    ],
+    "Docker Architecture": "AMD64",
     "Model Size": 415.0,
-    "Environment Size": 1549.0
+    "Environment Size": 1549.0,
+    "Image Size": 2159.49,
+    "Computational Performance 1": 41.32,
+    "Computational Performance 2": 77.22,
+    "Computational Performance 3": 277.2,
+    "Computational Performance 4": 1455.86,
+    "Computational Performance 5": -1.0
 }
