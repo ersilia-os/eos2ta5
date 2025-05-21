@@ -41,7 +41,12 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `415`
 - **Environment Size (Mb):** `1549`
+- **Image Size (Mb):** `2159.49`
 
+**Computational Performance (seconds):**
+- 10 inputs: `41.32`
+- 100 inputs: `277.2`
+- 10000 inputs: `-1`
 
 ### References
 - **Source Code**: [https://github.com/Abdulk084/CardioTox](https://github.com/Abdulk084/CardioTox)
