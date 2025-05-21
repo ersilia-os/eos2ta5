@@ -2,10 +2,10 @@ from .model import CardioTox
 
 import numpy as np
 import tensorflow as tf
-import keras
 
-from keras.layers.embeddings import Embedding
-from keras.layers import Flatten
+
+from tensorflow.keras.layers import Embedding
+from tensorflow.keras.layers import Flatten
 from tensorflow.python.keras.models import Model
 from tensorflow.python.keras.regularizers import l2
 from tensorflow.python.keras.layers import Dense, Dropout
@@ -65,9 +65,9 @@ class FVModel(CardioTox):
 
 
         x = Embedding(1025, 200, input_length=n_x_new)(inputs)
-        x = keras.layers.Conv1D(192, 10, activation='relu')(x)
-        x = keras.layers.Conv1D(192, 5, activation='relu')(x)
-        x = keras.layers.Conv1D(192, 3, activation='relu')(x)
+        x = tf.keras.layers.Conv1D(192, 10, activation='relu')(x)
+        x = tf.keras.layers.Conv1D(192, 5, activation='relu')(x)
+        x = tf.keras.layers.Conv1D(192, 3, activation='relu')(x)
         x = Flatten()(x)
         x = Dense(100, kernel_regularizer=l2(0.01), bias_regularizer=l2(0.01), activation='relu')(x)
         x = Dropout(0.5)(x)

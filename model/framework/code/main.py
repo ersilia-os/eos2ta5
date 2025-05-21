@@ -22,6 +22,6 @@ preds = model.predict(smiles)
 
 with open(outfile, "w") as f:
     writer = csv.writer(f)
-    writer.writerow(["probability"])
+    writer.writerow(["herg_inhibition"])
     for i in range(len(preds)):
         writer.writerow(list(preds[i]))
