@@ -50,7 +50,7 @@ Below are the **Output Columns** of the model:
 
 ### References
 - **Source Code**: [https://github.com/Abdulk084/CardioTox](https://github.com/Abdulk084/CardioTox)
-- **Publication**: [https://jcheminf.biomedcentral.com/articles/10.1186/s13321-021-00541-z](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-021-00541-z)
+- **Publication**: [https://doi.org/10.1186/s13321-021-00541-z](https://doi.org/10.1186/s13321-021-00541-z)
 - **Publication Type:** `Peer reviewed`
 - **Publication Year:** `2021`
 - **Ersilia Contributor:** [miquelduranfrigola](https://github.com/miquelduranfrigola)
