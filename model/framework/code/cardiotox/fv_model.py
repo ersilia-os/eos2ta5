@@ -30,9 +30,14 @@ class FVModel(CardioTox):
     def _convert_to_fv(self, smiles):
         bit_size=1024
         Max_len=93
+        self.failed_indices = set()
         dataX = []
-        for smile in smiles:
+        for idx, smile in enumerate(smiles):
             mol = Chem.MolFromSmiles(smile)
+            if mol is None:
+                self.failed_indices.add(idx)
+                dataX.append(np.zeros(bit_size, dtype=np.int8))
+                continue
             fp = AllChem.GetMorganFingerprintAsBitVect(mol, 2, nBits=bit_size)
             fp = np.array(fp)
             dataX.append(fp)
@@ -46,6 +51,11 @@ class FVModel(CardioTox):
             n_ones = 0
             for j in range(bit_size):
                 if dataX[i][j] == 1:
+                    if n_ones >= Max_len:
+                        # fingerprint has more set bits than fit in the fixed-size
+                        # vector; flag this molecule instead of overflowing fp[]
+                        self.failed_indices.add(i)
+                        break
                     fp[n_ones] = j+1
                     n_ones += 1
             data_x.append(fp)

@@ -39,9 +39,11 @@ class EnsembleModel(CardioTox):
     
     def _preprocess_per_member(self, smiles):
         preprocessed_smiles = []
+        self.failed_indices = set()
         for member in self.members:
             s = member.preprocess_smile(smiles)
             preprocessed_smiles.append(s)
+            self.failed_indices.update(getattr(member, "failed_indices", set()))
         return preprocessed_smiles
         
     def preprocess_smile(self, smiles):

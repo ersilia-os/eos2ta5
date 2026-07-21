@@ -60,6 +60,11 @@ class CardioTox(ABC):
         smiles = [smile.replace(" ", "") for smile in smiles]
         smile_preprocessed = self.preprocess_smile(smiles)
         out = self.model.predict(smile_preprocessed)
+        failed_indices = getattr(self, "failed_indices", None)
+        if failed_indices:
+            out = out.astype(float)
+            for idx in failed_indices:
+                out[idx] = np.nan
         if probabilities:
             return self.probabilities(out)
         return out
