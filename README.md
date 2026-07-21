@@ -2,7 +2,7 @@
 
 A robust predictor for hERG channel blockade based on an ensemble of five deep learning models. The authors have collected a dataset from public sources, such as BindingDB and ChEMBL on hERG blockers and non-blockers. The cut-off for hERG blockade was set at IC50 < 10 uM for the classifier.
 
-This model was incorporated on 2021-10-18.Last packaged on 2025-10-13.
+This model was incorporated on 2021-10-18.Last packaged on 2026-07-21.
 
 ## Information
 ### Identifiers
@@ -41,12 +41,12 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `415`
 - **Environment Size (Mb):** `1563`
-- **Image Size (Mb):** `2242.14`
+- **Image Size (Mb):** `2275.86`
 
 **Computational Performance (seconds):**
-- 10 inputs: `32.31`
-- 100 inputs: `212.12`
-- 10000 inputs: `-1`
+- 10 inputs: `29.51`
+- 100 inputs: `42.91`
+- 10000 inputs: `1389.3`
 
 ### References
 - **Source Code**: [https://github.com/Abdulk084/CardioTox](https://github.com/Abdulk084/CardioTox)
