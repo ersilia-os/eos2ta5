@@ -1,6 +1,6 @@
 # Ligand-based prediction of hERG blockade
 
-A robust predictor for hERG channel blockade based on an ensemble of five deep learning models. The authors have collected a dataset from public sources, such as BindingDB and ChEMBL on hERG blockers and non-blockers. The cut-off for hERG blockade was set at IC50 < 10 uM for the classifier.
+Predicts blockade of the hERG potassium channel, the cardiac liability most often responsible for late-stage attrition. CardioTox net combines several molecular representations into a meta-feature ensemble rather than relying on one descriptor family, an arrangement Karim and colleagues found more robust across external test sets than any single model. They placed particular emphasis on performance for compounds dissimilar to the training data, which is where hERG predictors typically degrade.
 
 This model was incorporated on 2021-10-18.Last packaged on 2026-07-21.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2021-10-18.Last packaged on 2026-07-21.
 ### Output
 - **Output Dimension:** `1`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Probability that the compound inhibits hERG (IC50 < 10 uM)
+- **Interpretation:** Probability that a compound blocks the hERG potassium channel.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
