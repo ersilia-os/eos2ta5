@@ -1,6 +1,6 @@
 # Ligand-based prediction of hERG blockade
 
-Predicts blockade of the hERG potassium channel, the cardiac liability most often responsible for late-stage attrition. CardioTox net combines several molecular representations into a meta-feature ensemble rather than relying on one descriptor family, an arrangement Karim and colleagues found more robust across external test sets than any single model. They placed particular emphasis on performance for compounds dissimilar to the training data, which is where hERG predictors typically degrade.
+Predicts blockade of the hERG potassium channel, the cardiac liability most often responsible for late-stage attrition. CardioTox net stacks five deep learning base models, each on a different molecular representation, under a neural network that combines their outputs, an arrangement Karim and colleagues found more robust than any single model. Training used 12,620 compounds from BindingDB, ChEMBL and three further sources, labelled as blockers below an IC50 of 10 uM, with evaluation weighted towards compounds unlike that training set.
 
 This model was incorporated on 2021-10-18.Last packaged on 2026-07-21.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2021-10-18.Last packaged on 2026-07-21.
 ### Output
 - **Output Dimension:** `1`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Probability that a compound blocks the hERG potassium channel.
+- **Interpretation:** Probability that a compound blocks the hERG potassium channel, with blockers defined by IC50 under 10 uM.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
