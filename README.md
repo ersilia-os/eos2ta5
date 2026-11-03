@@ -2,7 +2,8 @@
 
 Predicts blockade of the hERG potassium channel, the cardiac liability most often responsible for late-stage attrition. CardioTox net stacks five deep learning base models, each on a different molecular representation, under a neural network that combines their outputs, an arrangement Karim and colleagues found more robust than any single model. Training used 12,620 compounds from BindingDB, ChEMBL and three further sources, labelled as blockers below an IC50 of 10 uM, with evaluation weighted towards compounds unlike that training set.
 
-This model was incorporated on 2021-10-18.Last packaged on 2026-07-21.
+This model was incorporated on 2021-10-18.
+Last packaged on 2026-07-21.
 
 ## Information
 ### Identifiers
