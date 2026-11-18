@@ -44,6 +44,7 @@
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2ta5.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos2ta5",
     "Docker Architecture": "AMD64",
+    "Apptainer": "https://models-sif.s3.eu-north-1.amazonaws.com/eos2ta5_v1.sif",
     "Model Size": 415.0,
     "Environment Size": 1566.0,
     "Image Size": 1692.43,
